@@ -102,7 +102,7 @@ export default function FilteredPage() {
   console.log("Selected Values", formData);
 
   return (
-    <div className="p-10">
+    <div className="md:p-10 p-7">
       <div className="flex justify-between tracking-wide w-[300px]">
         {/* Filtered Parameters */}
         <div className=" w-full">
