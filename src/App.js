@@ -5,7 +5,7 @@ import FilteredData from './pages/FilteredData';
 
 function App() {
   return (
-    <div className="flex flex-row justify-between tracking-wide bg-[#f3f3f8]">
+    <div className="flex lg:flex-row flex-col justify-between tracking-wide bg-[#f3f3f8]">
      <FilteredPage />
      <FilteredData />
     </div>

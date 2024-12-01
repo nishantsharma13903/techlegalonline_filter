@@ -36,9 +36,9 @@ export default function FilteredData() {
   ];
 
   return (
-    <div className="p-10 w-[calc(100%-300px)]">
+    <div className="p-10 md:w-[calc(100%-300px)] w-full flex flex-col items-center">
       {/* Search */}
-      <div className="flex justify-center gap-2 w-full">
+      <div className="hidden md:flex justify-center gap-2 w-full">
         <div className="relative flex border w-full">
           <div className="relative inline-block">
             <select
@@ -89,17 +89,17 @@ export default function FilteredData() {
         </div>
       </div>
       {/* Paginated Data */}
-      <div className="w-[800px] mt-16">
+      <div className="lg:w-[800px] w-[300px] md:mt-12 mt-0 flex items-center flex-col">
         {Array.from({ length: 10 }, (_, i) => {
           return (
             <div
-              className="flex justify-between gap-6 w-full mt-8 cursor-pointer shadow-md inset-1 border px-6 py-6 bg-white"
+              className="flex md:flex-row flex-col justify-between gap-6 w-full mt-8 cursor-pointer shadow-md inset-1 border px-6 py-6 bg-white"
               key={i}
             >
-              <div className="w-[180px] border">
+              <div className="md:w-[200px] w-full">
                 <img
                   src={img}
-                  className="h-[120px] w-[200px] rounded-md"
+                  className="md:h-[120px] h-[150px] w-full rounded-md"
                   alt=""
                 />
               </div>
@@ -113,7 +113,9 @@ export default function FilteredData() {
                 </h4>
                 <p className="text-sm text-[#4b4b4b] font-medium">
                   <i className="fa fa-eye"></i>
-                  <span className="ml-2">{Number.parseInt(Math.random()*100)}</span>
+                  <span className="ml-2">
+                    {Number.parseInt(Math.random() * 100)}
+                  </span>
                 </p>
               </div>
             </div>
@@ -121,7 +123,7 @@ export default function FilteredData() {
         })}
         {/* Paginated Series */}
 
-        <div className="mt-10 flex justify-between items-center">
+        <div className="mt-10 flex md:flex-row flex-col md:justify-between gap-4 items-center w-full">
           <div className="">
             <p className="text-[#4b4b4b]">Show Entries 1 to 10</p>
           </div>
